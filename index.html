@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSBC Australia Revolution</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">HSBC</div>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#" onclick="showPage('home'); return false;" class="active">Home</a></li>
+            <li><a href="#" onclick="showPage('challenges'); return false;">Challenges</a></li>
+            <li class="dropdown">
+                <a href="#" onclick="toggleDropdown(); return false;" class="dropdown-toggle">Solutions <span class="arrow">▼</span></a>
+                <ul class="dropdown-menu" id="solutionsDropdown">
+                    <li><a href="#" onclick="showPage('solution-wealth'); return false;">Wealth Management</a></li>
+                    <li><a href="#" onclick="showPage('solution-migrant'); return false;">Migrant Banking</a></li>
+                    <li><a href="#" onclick="showPage('solution-gban'); return false;">Global Bank Account</a></li>
+                    <li><a href="#" onclick="showPage('solution-arrival'); return false;">Arrival Banking</a></li>
+                    <li><a href="#" onclick="showPage('solution-salary'); return false;">Salary Porting</a></li>
+                    <li><a href="#" onclick="showPage('solution-ai'); return false;">AI Assistant</a></li>
+                </ul>
+            </li>
+            <li><a href="#" onclick="showPage('roadmap'); return false;">Roadmap</a></li>
+            <li><a href="#" onclick="showPage('revenue'); return false;">Revenue</a></li>
+            <li><a href="#" onclick="showPage('about-me'); return false;">About Me</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-toggle" onclick="toggleSidebar()" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Main Content Area -->
+    <div class="main-content" id="mainContent">
+        <!-- HOME PAGE -->
+        <div id="page-home" class="page active">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 style="color: #FFFFFF; font-weight: 700;">HSBC Australia Revolution</h1>
+                    <p class="hero-subtitle">Transforming into Australia's Gateway to Global Banking</p>
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-value">$226M</div>
+                            <div class="metric-label">Total Investment</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">36 Months</div>
+                            <div class="metric-label">Timeline</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">$470M</div>
+                            <div class="metric-label">Year 4 Revenue</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About HSBC Section -->
+            <section class="about-section">
+                <h2 class="section-title">About HSBC</h2>
+                <p class="about-text">
+                    HSBC is the world's largest international bank with 160 years of history, serving 41 million customers across 57 countries. Despite global dominance, HSBC holds less than 1% market share in Australia. Our revolution strategy transforms this weakness into strength by focusing on global niches where our international network creates unbeatable competitive advantage.
+                </p>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value">160 Years</div>
+                        <div class="stat-label">Global History</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">41 Million</div>
+                        <div class="stat-label">Worldwide Customers</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">57</div>
+                        <div class="stat-label">Countries</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">0.5M</div>
+                        <div class="stat-label">Australian Customers</div>
+                    </div>
+                </div>
+            </section>
+            <footer class="site-footer">
+                <p>&copy; 2025 HSBC Australia Strategic Innovation Initiative | Prepared by Nakuul Agarwaal</p>
+            </footer>
+        </div>
+
+        <!-- CHALLENGES PAGE -->
+        <div id="page-challenges" class="page">
+            <div class="page-header">
+                <h1>Current Challenges</h1>
+                <p class="page-subtitle">HSBC Australia faces unique obstacles that require innovative solutions</p>
+            </div>
+            <div class="challenges-list">
+                <div class="challenge-card">
+                    <div class="challenge-number">01</div>
+                    <h3>Branch Network Disadvantage</h3>
+                    <p>36 branches vs Commonwealth Bank's 1,100+ branches nationwide. HSBC cannot compete in physical banking presence, creating a massive distribution gap.</p>
+                </div>
+                <div class="challenge-card">
+                    <div class="challenge-number">02</div>
+                    <h3>Regulatory Compliance Cost Burden</h3>
+                    <p>Australian banking regulations impose 10-20x higher compliance costs per customer for smaller players. HSBC's overhead is unsustainable at 0.5M customers.</p>
+                </div>
+                <div class="challenge-card">
+                    <div class="challenge-number">03</div>
+                    <h3>Systemic Fraud &amp; Trust Issues</h3>
+                    <p>ASIC lawsuit alleging $23M in customer losses from fraud (2020-2024). Reputational damage undermines trust in post-Royal Commission environment.</p>
+                </div>
+                <div class="challenge-card">
+                    <div class="challenge-number">04</div>
+                    <h3>Profitability Struggles</h3>
+                    <p>Despite $36B in assets, HSBC Australia profitability volatile: $330M (2019) → $216M (2021) → $282M (2022). Cannot generate adequate returns.</p>
+                </div>
+                <div class="challenge-card">
+                    <div class="challenge-number">05</div>
+                    <h3>Scale Disadvantage in Retail</h3>
+                    <p>Big Four control 70% of deposits. HSBC's 0.5% market share makes retail banking economically unviable. Cannot achieve economies of scale.</p>
+                </div>
+            </div>
+            <footer class="site-footer">
+                <p>&copy; 2025 HSBC Australia Strategic Innovation Initiative | Prepared by Nakuul Agarwaal</p>
+            </footer>
+        </div>
+
+        <!-- SOLUTION PAGES -->
+        <div id="page-solution-wealth" class="page solution-page">
+            <div class="page-header">
+                <h1>Wealth Management Opportunity</h1>
+                <p class="page-subtitle">Cross-border wealth for HNW individuals</p>
+            </div>
+            <div class="solution-content">
+                <div class="solution-section">
+                    <h3>Why This Is Needed</h3>
+                    <p>High-net-worth (HNW) individuals with cross-border financial needs struggle to find integrated solutions. Australia has over 200,000 HNW individuals with international connections, yet most banks offer fragmented services that require managing multiple institutions across countries. The global wealth management market is worth $2.4 trillion, and Australia's HNW segment is growing at 8% annually.</p>
+                    <p>HSBC's global presence provides a unique advantage - we can offer truly integrated wealth management across borders, something purely domestic banks cannot match. This positions us as the natural choice for globally-minded wealthy Australians.</p>
+                </div>
+                <div class="solution-section">
+                    <h3>Core Idea</h3>
+                    <ul>
+                        <li>Dedicated relationship managers with global expertise</li>
+                        <li>Cross-border portfolio management across multiple currencies</li>
+                        <li>International estate planning and tax optimization</li>
+                        <li>Access to global investment opportunities unavailable to domestic banks</li>
+                        <li>Seamless wealth transfer between HSBC entities worldwide</li>
+                        <li>Concierge services spanning multiple countries</li>
+                    </ul>
+                </div>
+                <div class="solution-section">
+                    <h3>How It Works</h3>
+                    <p>Clients receive a global relationship manager who coordinates with HSBC wealth teams across all countries where they have interests. A unified digital platform provides real-time visibility into all global assets, with consolidated reporting in their chosen currency. Advanced algorithms optimize tax efficiency across jurisdictions while maintaining full compliance.</p>
+                    <p>Investment strategies leverage HSBC's global research teams, providing access to opportunities in emerging markets, private equity, and exclusive deals not available through Australian-only institutions.</p>
+                </div>
+                <div class="solution-section">
+                    <h3>Why Revolutionary</h3>
+                    <ul>
+                        <li>Only bank in Australia offering true global wealth integration</li>
+                        <li>Fees 30% lower than competitors due to HSBC's scale</li>
+                        <li>Direct access to HSBC's $3 trillion global asset management platform</li>
+                        <li>AI-powered insights from analyzing global market patterns</li>
+                        <li>Same-day execution on international transactions</li>
+                    </ul>
+                </div>
+                <div class="solution-section financial">
+                    <h3>Financial Projections</h3>
+                    <div class="financial-grid">
+                        <div class="financial-item">
+                            <span class="label">Investment Required</span>
+                            <span class="value">$28M</span>
+                        </div>
+                        <div class="financial-item">
+                            <span class="label">Target Market</span>
+                            <span class="value">15,000 clients</span>
+                        </div>
+                        <div class="financial-item">
+                            <span class="label">Avg Assets Per Client</span>
+                            <span class="value">$5M</span>
+                        </div>
+                        <div class="financial-item">
+                            <span class="label">Year 4 Revenue</span>
+                            <span class="value">$60M</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="site-footer">
+                <p>&copy; 2025 HSBC Australia Strategic Innovation Initiative | Prepared by Nakuul Agarwaal</p>
+            </footer>
+        </div>
+
+        <div id="page-solution-migrant" class="page solution-page">
+            <div class="page-header">
+                <h1>Expatriate &amp; Migrant Banking</h1>
+                <p class="page-subtitle">Dedicated service for 1.4M Asian-ancestry Australians</p>
+            </div>
+            <div class="solution-content">
+                <div class="solution-section">
+                    <h3>Why This Is Needed</h3>
+                    <p>1.4 million Australians trace their ancestry to HSBC's core markets (China, India, Hong Kong, Singapore). These communities face unique challenges: remitting money to family abroad, navigating unfamiliar financial systems, and lacking culturally-informed financial advice. Traditional Australian banks don't understand their specific needs or offer services in their languages.</p>
+                    <p>HSBC is uniquely positioned to serve this market - we already operate in their countries of origin, understand their cultural banking preferences, and can provide seamless cross-border services.</p>
+                </div>
+                <div class="solution-section">
+                    <h3>Core Idea</h3>
+                    <ul>
+                        <li>Multilingual banking support (Mandarin, Cantonese, Hindi, Tamil, Bahasa)</li>
+                        <li>Community banking centers in high-density migrant suburbs</li>
+                        <li>Culturally-trained advisors who understand unique financial goals</li>
+                        <li>Preferential rates on remittances to HSBC markets</li>
+                        <li>Partnerships with ethnic media and community organizations</li>
+                        <li>Products designed for migrant life stages</li>
+                    </ul>
+                </div>
+                <div class="solution-section">
+                    <h3>How It Works</h3>
+                    <p>Mobile-first banking app with language switching, allowing customers to complete all transactions in their preferred language. Community banking centers in suburbs like Hurstville, Box Hill, Parramatta offer weekend hours and cultural holiday recognition.</p>
+                    <p>Financial education programs tailored to migrant experiences, covering Australian tax system, superannuation, and property market navigation.</p>
+                </div>
+                <div class="solution-section">
+                    <h3>Why Revolutionary</h3>
+                    <ul>
+                        <li>First Australian bank to offer comprehensive culturally-informed banking</li>
+                        <li>Zero-fee remittances to family accounts at HSBC branches abroad</li>
+                        <li>Instant account opening for new arrivals with foreign HSBC relationship</li>
+                        <li>Credit decisions considering overseas credit history and assets</li>
+                        <li>Community events and financial literacy in multiple languages</li>
+                    </ul>
+                </div>
+                <div class="solution-section financial">
+                    <h3>Financial Projections</h3>
+                    <div class="financial-grid">
+                        <div class="financial-item">
+                            <span class="label">Investment Required</span>
+                            <span class="value">$26M</span>
+                        </div>
+                        <div class="financial-item">
+                            <span class="label">Target Market</span>
+                            <span class="value">150,000 customers</span>
+                        </div>
+                        <div class="financial-item">
+                            <span class="label">Revenue Per User</span>
+                            <span class="value">$420/year</span>
+                        </div>
+                        <div class="financial-item">
+                            <span class="label">Year 4 Revenue</span>
+                            <span class="value">$63M</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="site-footer">
+                <p>&copy; 2025 HSBC Australia Strategic Innovation Initiative | Prepared by Nakuul Agarwaal</p>
+            </footer>
+        </div>
+
+        <div id="page-solution-gban" class="page solution-page">
+            <div class="page-header">
+                <h1>Global Bank Account Number (GBAN)</h1>
+                <p class="page-subtitle">One account across 6 countries, zero fees</p>
+            </div>
+            <div class="solution-content">
+                <div class="solution-section">
+                    <h3>Why This Is Needed</h3>
+                    <p>Globally mobile Australians - expats, students, business travelers, digital nomads - maintain financial lives across multiple countries but face massive friction. Opening separate bank accounts in each country requires physical presence, extensive documentation, and months of waiting. Transaction fees between accounts are exorbitant (typically 3-5%), and managing multiple apps/cards is cumbersome.</p>
+                    <p>350,000 Australians live abroad long-term, 1.2 million travel for work annually, and 130,000 students study overseas each year. These segments desperately need seamless multi-country banking but no Australian bank offers it.</p>
+                </div>
+                <div class="solution-section">
+                    <h3>Core Idea</h3>
+                    <p>One HSBC account that works as a local account in six countries: Australia, UK, USA, Hong Kong, Singapore, and Canada. Customers get local account numbers, routing codes, and debit cards for each country, accessible through a single app. Money moves instantly between currency wallets at interbank rates with zero fees.</p>
+                </div>
+                <div class="solution-section">
+                    <h3>How It Works</h3>
+                    <ul>
+                        <li>Single KYC process opens accounts in all six countries simultaneously</li>
+                        <li>Multi-currency wallet holds AUD, USD, GBP, HKD, SGD, CAD with real-time conversion</li>
+                        <li>Local payment rails integration - pay rent in London from AUD balance instantly</li>
+                        <li>Smart routing automatically uses optimal currency for each transaction</li>
+                        <li>Physical debit cards for each country, digital cards available instantly</li>
+                        <li>Unified transaction history across all currencies and accounts</li>
+                        <li>Tax reporting assistance for multi-country income</li>
+                    </ul>
+                </div>
+                <div class="solution-section">
+                    <h3>Why Revolutionary</h3>
+                    <ul>
+                        <li>World's first true multi-country retail bank account</li>
+                        <li>Zero fees on inter-currency transfers (vs $25-50 industry standard)</li>
+                        <li>Interbank exchange rates (saves 2-3% vs typical tourist rates)</li>
+                        <li>Instant account activation in all six countries</li>
+                        <li>ATM fee rebates globally up to $50/month</li>
+                        <li>24/7 support team covering all time zones</li>
+                    </ul>
+                </div>
+                <div class="solution-section financial">
+                    <h3>Financial Projections</h3>
+                    <div class="financial-grid">
+                        <div class="financial-item">
+                            <span class="label">Investment Required</span>
+                            <span class="value">$115M</span>
+                        </div>
+                        <div class="financial-item">
+                            <span class="label">Target Market</span>
+                            <span class="value">250,000 customers</span>
+                        </div>
+                        <div class="financial-item">
+                            <span class="label">Revenue Per User</span>
+                            <span class="value">$680/year</span>
+                        </div>
+                        <div class="financial-item">
+                            <span class="label">Year 4 Revenue</span>
+                            <span class="value">$170M</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="site-footer">
+                <p>&copy; 2025 HSBC Australia Strategic Innovation Initiative | Prepared by Nakuul Agarwaal</p>
+            </footer>
+        </div>
+
+        <div id="page-solution-arrival" class="page solution-page">
+            <div class="page-header">
+                <h1>30-Minute Arrival Banking</h1>
+                <p class="page-subtitle">Airport onboarding for 821,553 students annually</p>
+            </div>
+            <div class="solution-content">
+                <div class="solution-section">
+                    <h3>Why This Is Needed</h3>
+                    <p>Australia receives 821,553 international students annually, generating $40 billion in economic value. These students and working professionals face a critical pain point upon arrival. Traditional account opening takes 1-2 days, but the debit card takes about 1-2 weeks with branch visits, physical documents, and verification delays.</p>
+                    <p>In Australia, international students and working professionals can open bank accounts from their home country before arriving—which is convenient for having account details ready. However, the current system has critical limitations:</p>
+                    <ul>
+                        <li>You CAN open an account from overseas</li>
+                        <li>You CAN receive account details</li>
+                        <li>You CANNOT transfer funds to it until verified in Australia</li>
+                        <li>You CANNOT spend money because you don't have a debit card (digital or physical)</li>
+                        <li>After arriving in Australia, you must visit a branch for identity verification, wait for account activation, and wait 1-2 weeks for physical debit card delivery by mail</li>
+                        <li>During this 1-2 week period, you cannot make purchases or transactions</li>
+                    </ul>
+                    <p>This gap leaves new arrivals vulnerable during their most critical first weeks—unable to buy essentials, sign leases, or manage daily expenses despite having a bank account.</p>
+                </div>
+                <div class="solution-section">
+                    <h3>Core Idea</h3>
+                    <p>HSBC's 30-Minute Arrival Banking solves this critical gap. Students and working professionals can have both digital and physical debit cards ready upon arrival, eliminating the 1-2 week transaction blackout period.</p>
+                    <h4 style="font-size: 18px; font-weight: 600; color: var(--hsbc-dark); margin-top: var(--space-20); margin-bottom: var(--space-12);">Before Arrival:</h4>
+                    <ul>
+                        <li>Open HSBC account from home country (existing capability)</li>
+                        <li>Complete digital identity verification remotely</li>
+                        <li>Pay small convenience fee ($25-50) for instant card service</li>
+                        <li>HSBC prepares both digital and physical debit cards</li>
+                    </ul>
+                    <h4 style="font-size: 18px; font-weight: 600; color: var(--hsbc-dark); margin-top: var(--space-20); margin-bottom: var(--space-12);">Upon Arrival at Airport:</h4>
+                    <ul>
+                        <li>Visit HSBC kiosk at Sydney/Melbourne/Brisbane airports</li>
+                        <li>Complete final biometric verification (5 minutes)</li>
+                        <li>Collect pre-printed physical debit card</li>
+                        <li>Activate account and card instantly</li>
+                        <li>Digital card also available in mobile app immediately</li>
+                    </ul>
+                    <h4 style="font-size: 18px; font-weight: 600; color: var(--hsbc-dark); margin-top: var(--space-20); margin-bottom: var(--space-12);">Immediate Benefits:</h4>
+                    <ul>
+                        <li>Start spending money within 30 minutes of landing</li>
+                        <li>Buy SIM card at airport</li>
+                        <li>Pay for transport to accommodation</li>
+                        <li>Sign lease agreements requiring bank details</li>
+                        <li>Shop for essentials</li>
+                        <li>Make daily transactions immediately</li>
+                        <li>No 1-2 week waiting period for card delivery</li>
+                    </ul>
+                </div>
+                <div class="solution-section">
+                    <h3>How It Works</h3>
+                    <p>The system integrates pre-arrival digital verification with airport-based card collection, creating a seamless onboarding experience:</p>
+                    <ul>
+                        <li>Pre-arrival online application using passport and university acceptance letter or work visa</li>
+                        <li>Remote digital identity verification completed from home country</li>
+                        <li>Payment of convenience fee ($25-50) triggers card preparation</li>
+                        <li>HSBC prints and prepares physical card before customer arrival</li>
+                        <li>Quick biometric verification at airport kiosk (5 minutes)</li>
+                        <li>Instant card collection and activation</li>
+                        <li>Digital wallet and mobile tap-to-pay enabled simultaneously</li>
+                        <li>Immediate transaction capability—buy SIM card, pay for transport, shop for essentials</li>
+                    </ul>
+                </div>
+                <div class="solution-section">
+                    <h3>Why Revolutionary</h3>
+                    <p>This innovation transforms the arrival experience by eliminating the critical 1-2 week gap when new arrivals have bank accounts but cannot use them. The Big Four banks require in-person verification and mail delivery of cards, leaving customers unable to transact during their most vulnerable period. HSBC's pre-verified card system means customers are transaction-ready within 30 minutes of landing.</p>
+                    <ul>
+                        <li>Eliminates 1-2 week transaction gap that all competitors have</li>
+                        <li>Pre-verified cards ready before arrival (unique to HSBC)</li>
+                        <li>30 minutes to full transaction capability vs. 1-2 weeks industry standard</li>
+                        <li>Big Four banks cannot compete—they require in-person verification plus mail delivery</li>
+                        <li>Captures customers at their most critical moment of need</li>
+                        <li>Instant spending power for SIM cards, transport, leases, and essentials</li>
+                        <li>Integration with university payment systems and accommodation providers</li>
+                        <li>Student community platform connecting new arrivals with existing customers</li>
+                    </ul>
+                </div>
+                <div class="solution-section financial">
+                    <h3>Financial Projections</h3>
+                    <p style="color: var(--color-white); opacity: 0.95; margin-bottom: var(--space-20);">Target Market: 821,553 international students arrive in Australia annually, plus tens of thousands of skilled migrants and working professionals. All face the same card delivery delay problem.</p>
+                    <div class="financial-grid">
+                        <div class="financial-item">
+                            <span class="label">Investment Required</span>
+                            <span class="value">$35M</span>
+                        </div>
+                        <div class="financial-item">
+                            <span class="label">Target Customers</span>
+                            <span class="value">100,000</span>
+                        </div>
+                        <div class="financial-item">
+                            <span class="label">Total Annual Market</span>
+                            <span class="value">821,553</span>
+                        </div>
+                        <div class="financial-item">
+                            <span class="label">Year 4 Revenue</span>
+                            <span class="value">$52M</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="site-footer">
+                <p>&copy; 2025 HSBC Australia Strategic Innovation Initiative | Prepared by Nakuul Agarwaal</p>
+            </footer>
+        </div>
+
+        <div id="page-solution-salary" class="page solution-page">
+            <div class="page-header">
+                <h1>International Salary Porting</h1>
+                <p class="page-subtitle">Choose salary destination country</p>
+            </div>
+            <div class="solution-content">
+                <div class="solution-section">
+                    <h3>Why This Is Needed</h3>
+                    <p>Australian professionals working for global companies, remote workers serving overseas clients, and expatriates employed by Australian firms face a critical question: which country should receive my salary? This decision impacts taxes, superannuation, currency risk, and long-term financial planning. Currently, employers dictate payment location with no flexibility.</p>
+                    <p>250,000+ Australians work remotely for overseas companies. 180,000 expats work for Australian companies abroad. These workers face currency losses, double taxation complications, and retirement planning challenges.</p>
+                </div>
+                <div class="solution-section">
+                    <h3>Core Idea</h3>
+                    <p>HSBC customers working across borders can choose which HSBC country receives their salary each pay period. App-based selection process allows splitting salary across multiple countries (e.g., 60% Australia, 40% Singapore) or switching entirely based on residency status. Automatic tax withholding and reporting in both jurisdictions.</p>
+                </div>
+                <div class="solution-section">
+                    <h3>How It Works</h3>
+                    <ul>
+                        <li>Customer designates preferred receiving countries in HSBC app</li>
+                        <li>Employer pays to single HSBC global account number</li>
+                        <li>HSBC automatically routes funds to designated country accounts</li>
+                        <li>Dynamic routing allows changes month-to-month</li>
+                        <li>Automatic currency conversion at interbank rates + 0.3%</li>
+                        <li>Tax documentation generated for both countries automatically</li>
+                        <li>Integration with accountants for complex cross-border tax situations</li>
+                        <li>Superannuation/pension contributions directed to appropriate jurisdiction</li>
+                    </ul>
+                </div>
+                <div class="solution-section">
+                    <h3>Why Revolutionary</h3>
+                    <ul>
+                        <li>First bank globally to offer true salary routing flexibility</li>
+                        <li>Saves customers 2-3% on currency conversion</li>
+                        <li>Automatic tax documentation eliminates accountant fees</li>
+                        <li>Reduces currency risk through strategic allocation</li>
+                        <li>Enables optimal tax planning with professional guidance</li>
+                        <li>Partnership with Big Four accounting firms for complex cases</li>
+                    </ul>
+                </div>
+                <div class="solution-section financial">
+                    <h3>Financial Projections</h3>
+                    <div class="financial-grid">
+                        <div class="financial-item">
+                            <span class="label">Investment Required</span>
+                            <span class="value">$26M</span>
+                        </div>
+                        <div class="financial-item">
+                            <span class="label">Target Market</span>
+                            <span class="value">80,000 customers</span>
+                        </div>
+                        <div class="financial-item">
+                            <span class="label">Revenue Per User</span>
+                            <span class="value">$465/year</span>
+                        </div>
+                        <div class="financial-item">
+                            <span class="label">Year 4 Revenue</span>
+                            <span class="value">$42M</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="site-footer">
+                <p>&copy; 2025 HSBC Australia Strategic Innovation Initiative | Prepared by Nakuul Agarwaal</p>
+            </footer>
+        </div>
+
+        <div id="page-solution-ai" class="page solution-page">
+            <div class="page-header">
+                <h1>AI Cross-Border Assistant</h1>
+                <p class="page-subtitle">Intelligent global financial management</p>
+            </div>
+            <div class="solution-content">
+                <div class="solution-section">
+                    <h3>Why This Is Needed</h3>
+                    <p>Cross-border financial questions are complex: optimal currency conversion timing, tax implications of international investments, visa requirements for account opening, property purchase regulations in foreign countries. Generic banking chatbots can't help - they lack international expertise and cultural context. Customers currently rely on expensive consultants or make costly uninformed decisions.</p>
+                    <p>HSBC customers have unique cross-border needs that no existing AI assistant addresses. We need an assistant that understands international banking regulations, currency markets, tax treaties, and cultural financial practices across all HSBC markets.</p>
+                </div>
+                <div class="solution-section">
+                    <h3>Core Idea</h3>
+                    <p>An AI assistant trained specifically on cross-border banking scenarios, leveraging HSBC's global knowledge base. It provides instant, accurate guidance on international transactions, regulatory requirements, tax implications, and optimal financial strategies across multiple countries. Available 24/7 in multiple languages with seamless handoff to human experts for complex cases.</p>
+                </div>
+                <div class="solution-section">
+                    <h3>How It Works</h3>
+                    <ul>
+                        <li>Large language model trained on HSBC's global banking knowledge base</li>
+                        <li>Real-time access to exchange rates, country regulations, and tax treaties</li>
+                        <li>Natural language understanding in 12 languages with cultural context awareness</li>
+                        <li>Integration with customer's global account data for personalized advice</li>
+                        <li>Scenario modeling capabilities</li>
+                        <li>Proactive alerts on regulation changes affecting customer's situation</li>
+                        <li>One-click escalation to human specialists</li>
+                    </ul>
+                </div>
+                <div class="solution-section">
+                    <h3>Why Revolutionary</h3>
+                    <ul>
+                        <li>Only AI assistant with true cross-border banking expertise</li>
+                        <li>Reduces need for expensive specialist consultations</li>
+                        <li>Available 24/7 across all time zones</li>
+                        <li>Cultural awareness - understands context from different cultures</li>
+                        <li>Learns from every interaction, continuously improving accuracy</li>
+                        <li>Proactive monitoring with timely alerts</li>
+                    </ul>
+                </div>
+                <div class="solution-section financial">
+                    <h3>Financial Projections</h3>
+                    <div class="financial-grid">
+                        <div class="financial-item">
+                            <span class="label">Investment Required</span>
+                            <span class="value">$18M</span>
+                        </div>
+                        <div class="financial-item">
+                            <span class="label">Target Users</span>
+                            <span class="value">500,000 active</span>
+                        </div>
+                        <div class="financial-item">
+                            <span class="label">Premium Subscribers</span>
+                            <span class="value">100,000</span>
+                        </div>
+                        <div class="financial-item">
+                            <span class="label">Year 4 Revenue</span>
+                            <span class="value">$81M</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="site-footer">
+                <p>&copy; 2025 HSBC Australia Strategic Innovation Initiative | Prepared by Nakuul Agarwaal</p>
+            </footer>
+        </div>
+
+        <!-- ROADMAP PAGE -->
+        <div id="page-roadmap" class="page">
+            <div class="page-header">
+                <h1>Implementation Roadmap</h1>
+                <p class="page-subtitle">Strategic rollout across 36 months</p>
+            </div>
+            <div class="roadmap-content">
+                <div class="phase-card-clean">
+                    <div class="phase-header-clean">
+                        <h3>Phase 1: Foundation</h3>
+                        <p class="phase-duration">Q1-Q2 2026 • $50M Investment</p>
+                    </div>
+                    <div class="phase-body">
+                        <p><strong>Launch Strategy:</strong> AI Assistant beta launch + Arrival Banking at Sydney/Melbourne airports. Target 105K customers.</p>
+                        <h4>Key Milestones</h4>
+                        <ul>
+                            <li>AI Assistant beta with 10,000 test users</li>
+                            <li>Airport banking kiosks operational at 2 locations</li>
+                            <li>Student partnership agreements with top 20 universities</li>
+                            <li>Initial marketing campaign targeting international students</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="phase-card-clean">
+                    <div class="phase-header-clean">
+                        <h3>Phase 2: Scale</h3>
+                        <p class="phase-duration">Q3 2026-Q2 2027 • $96M Investment</p>
+                    </div>
+                    <div class="phase-body">
+                        <p><strong>Expansion Strategy:</strong> International Salary Porting with corporate partnerships. GBAN pilot AU-UK. Target 70K additional customers.</p>
+                        <h4>Key Milestones</h4>
+                        <ul>
+                            <li>Salary Porting launch with 50+ corporate partners</li>
+                            <li>GBAN pilot program Australia-UK corridor</li>
+                            <li>Wealth Management service for 5,000 HNW clients</li>
+                            <li>Community banking centers in 5 high-density migrant suburbs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="phase-card-clean">
+                    <div class="phase-header-clean">
+                        <h3>Phase 3: Global Expansion</h3>
+                        <p class="phase-duration">Q3 2027+ • $80M Investment</p>
+                    </div>
+                    <div class="phase-body">
+                        <p><strong>Full Rollout:</strong> GBAN global expansion (6 countries). 5+ airport locations. Target 1M+ cumulative customers.</p>
+                        <h4>Key Milestones</h4>
+                        <ul>
+                            <li>GBAN expansion to all 6 countries (AU, UK, US, HK, SG, CA)</li>
+                            <li>Airport banking at Brisbane, Perth, Adelaide airports</li>
+                            <li>AI Assistant full launch with enterprise tier</li>
+                            <li>Achieve 1M+ customer milestone</li>
+                            <li>Break-even on cumulative investment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <footer class="site-footer">
+                <p>&copy; 2025 HSBC Australia Strategic Innovation Initiative | Prepared by Nakuul Agarwaal</p>
+            </footer>
+        </div>
+
+        <!-- REVENUE PAGE -->
+        <div id="page-revenue" class="page">
+            <div class="page-header">
+                <h1>Revenue Projections</h1>
+                <p class="page-subtitle">Financial outlook and ROI analysis</p>
+            </div>
+            <div class="revenue-content">
+                <div class="chart-container">
+                    <canvas id="revenueChart"></canvas>
+                </div>
+                <div class="revenue-metrics-grid">
+                    <div class="metric-card-large">
+                        <div class="metric-icon">👥</div>
+                        <div class="metric-value-large">1M+</div>
+                        <div class="metric-label-large">Customer Acquisition</div>
+                        <p class="metric-desc">Target customer base by end of Phase 3</p>
+                    </div>
+                    <div class="metric-card-large">
+                        <div class="metric-icon">📈</div>
+                        <div class="metric-value-large">208%</div>
+                        <div class="metric-label-large">Return on Investment</div>
+                        <p class="metric-desc">Cumulative ROI over 5-year period</p>
+                    </div>
+                    <div class="metric-card-large">
+                        <div class="metric-icon">⏱️</div>
+                        <div class="metric-value-large">2.7 Years</div>
+                        <div class="metric-label-large">Payback Period</div>
+                        <p class="metric-desc">Time to recover initial investment</p>
+                    </div>
+                </div>
+
+                <div class="revenue-breakdown">
+                    <h3>Revenue by Solution (Year 4)</h3>
+                    <div class="breakdown-grid">
+                        <div class="breakdown-item">
+                            <span class="solution-name">GBAN</span>
+                            <span class="solution-revenue">$170M</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="solution-name">AI Assistant</span>
+                            <span class="solution-revenue">$81M</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="solution-name">Migrant Banking</span>
+                            <span class="solution-revenue">$63M</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="solution-name">Wealth Management</span>
+                            <span class="solution-revenue">$60M</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="solution-name">Arrival Banking</span>
+                            <span class="solution-revenue">$52M</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="solution-name">Salary Porting</span>
+                            <span class="solution-revenue">$42M</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="site-footer">
+                <p>&copy; 2025 HSBC Australia Strategic Innovation Initiative | Prepared by Nakuul Agarwaal</p>
+            </footer>
+        </div>
+
+        <!-- ABOUT ME PAGE -->
+        <div id="page-about-me" class="page">
+            <div class="page-header">
+                <h1>About Me</h1>
+                <p class="page-subtitle">Strategic vision for banking transformation</p>
+            </div>
+            <div class="about-me-content">
+                <div class="profile-card">
+                    <h2>Nakuul Agarwaal</h2>
+                    <p class="profile-title">Master's in IT and Commerce</p>
+                    <p class="profile-university">University of New South Wales (UNSW), Sydney</p>
+                </div>
+                
+                <div class="profile-bio">
+                    <h3>Professional Summary</h3>
+                    <p>Passionate about transforming the banking industry through innovative technology and customer-centric solutions. This pitch represents a comprehensive strategy for HSBC Australia's digital transformation, focusing on leveraging global strengths to capture underserved market segments.</p>
+                    <p>With a background in IT and Commerce, I am passionate about identifying critical market problems and developing innovative solutions that balance exceptional customer service with company financial growth. My approach combines technical expertise with strategic business thinking to create solutions that are both feasible and impactful, ensuring sustainable value creation for all stakeholders.</p>
+                </div>
+                
+                <div class="profile-bio">
+                    <h3>Future Goals</h3>
+                    <ul class="goals-list">
+                        <li>Develop innovative tech solutions that drive social and economic impact</li>
+                        <li>Bridge technology and business strategy to create market opportunities</li>
+                        <li>Lead digital transformation initiatives in financial services sector</li>
+                        <li>Create data-driven solutions that solve real-world business challenges</li>
+                        <li>Build sustainable technologies that empower communities globally</li>
+                    </ul>
+                </div>
+                
+                <div class="profile-bio">
+                    <h3>Connect With Me</h3>
+                    <div class="contact-links">
+                        <a href="mailto:nakuul.agarwaal@gmail.com" class="btn btn-primary">Email Me</a>
+                        <a href="https://www.linkedin.com/in/nakuulagarwaal/" target="_blank" class="btn btn-secondary">LinkedIn</a>
+                        <a href="https://github.com/Nakuul01" target="_blank" class="btn btn-secondary">GitHub</a>
+                        <a href="https://nakuul01.github.io/Portfolio/" target="_blank" class="btn btn-secondary">Portfolio Website</a>
+                    </div>
+                </div>
+            </div>
+            <footer class="site-footer">
+                <p>&copy; 2025 HSBC Australia Strategic Innovation Initiative | Prepared by Nakuul Agarwaal</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
